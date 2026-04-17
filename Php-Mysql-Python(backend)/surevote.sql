@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2025 at 04:55 PM
+-- Generation Time: Feb 08, 2026 at 06:46 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -97,34 +97,6 @@ CREATE TABLE `password_reset_tokens` (
   `expiration_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `password_reset_tokens`
---
-
-INSERT INTO `password_reset_tokens` (`id`, `user_id`, `token`, `status`, `expiration_date`) VALUES
-(38, 7, '14445ef3cc89969d85babe960e1597d2', 'active', '2025-04-10 12:46:41'),
-(39, 7, 'f21744dd24da2b4cecf0b580b5b115e5', 'active', '2025-04-10 12:55:51'),
-(40, 7, 'a171c57a1ee16107330627fa62f86a85', 'active', '2025-04-10 13:24:49'),
-(41, 7, '0f3c008efd82c16a0bb071a4a7d7e9b5', 'active', '2025-04-10 13:42:40'),
-(42, 7, '3ebad5d85bf67987c1cb5cc0bf6d4d54', 'active', '2025-04-10 13:57:05'),
-(43, 7, 'f9bde33bfb91ff01fd812bad514f3079', 'active', '2025-04-10 14:26:36'),
-(44, 7, '936f14e8dd124aabf6e33b45f3e3e5f4', 'active', '2025-04-10 15:01:38'),
-(47, 7, 'f72778048e412dfbb0a1247c4258dae9', 'active', '2025-04-12 17:16:37'),
-(48, 7, '26ca204bf93ccb241673ca7cf345ed66', 'active', '2025-04-12 17:19:05'),
-(49, 7, 'c68aca8dfca6b59a84dbf2720760eb70', 'active', '2025-04-12 17:19:57'),
-(50, 7, 'ca0df23533b2808a7ed943b538018436', 'active', '2025-04-12 17:22:06'),
-(51, 7, '0ab92116d9ec83f565785a6e2f3043e8', 'active', '2025-04-13 02:56:39'),
-(52, 7, '487903cc46904497e80400a1bcb359b4', 'active', '2025-04-13 03:15:24'),
-(53, 7, '3b197604d52c63b4bafc2e313472f338', 'active', '2025-04-13 03:18:58'),
-(54, 7, '7d015b9e5d330422abbb8867ffa990a4', 'active', '2025-04-13 03:20:51'),
-(55, 7, 'c775e4b2188ee429bd38e733921d96e4', 'active', '2025-04-13 03:21:43'),
-(56, 7, '141e89e833cc3fc240e627c7d70d9911', 'active', '2025-04-13 03:23:18'),
-(57, 7, '0819180686eaeaa79af822a26328f3f9', 'active', '2025-04-13 03:30:30'),
-(58, 7, '212001e4648e78da45a0d8135c20c99e', 'active', '2025-04-13 03:43:33'),
-(59, 7, 'f42eeda17119fcb58087535e9e665759', 'active', '2025-04-13 03:45:12'),
-(60, 7, '744f64ee28ca95f54e7873dc16935f42', 'active', '2025-04-25 05:17:07'),
-(61, 7, '36911b997ffd5df48fef983cecc46853', 'active', '2025-04-25 05:19:21');
-
 -- --------------------------------------------------------
 
 --
@@ -175,8 +147,6 @@ CREATE TABLE `voters` (
 --
 
 INSERT INTO `voters` (`id`, `name`, `email`, `password`, `phone`, `aadhaar`, `voter_id`, `image_path`, `registration_date`, `reset_token`, `reset_token_expiry`, `dob`, `gender`, `face_encoding`) VALUES
-(4, 'Shreya Shankar ', 'shristishreya3@gmail.com', '$2y$10$FoWI9E9yrh2S2uJ4788dvuVu68trGbD4Mdk97CI5b6yxkC65e/BZ2', '7050581646', '822561757324', 'SSA1234567', 'uploads/677a13b013a70.png', '2025-01-05 05:08:00', NULL, NULL, NULL, '', NULL),
-(7, 'Rabia Rizwan ', 'rabiarizwanmgr@gmail.com', '$2y$10$8unaGjw120VMCjUtmSp.iePdvQUkGkQ9gz0DpIkJrmcdpWj8asNnC', '9263948969', '123456789101', 'ABC1234567', 'uploads/679cd1b46ae23.png', '2025-01-31 09:05:48', NULL, NULL, NULL, '', NULL),
 (39, 'John Doe', 'john@example.com', '$2y$10$syQ1RsmgxB2yAW5k7Wpi/.xK9hY.lT9QQTVp345UxifeDBWUjVS36', '9876543210', '123456789012', 'VOTE12345', 'uploads/67b935dc07a99.png', '2025-02-21 21:56:36', NULL, NULL, '2000-01-01', '', NULL),
 (59, 'Rabia ', 'therabia412@gmail.com', '$2y$10$lqxFRzyxbHCGa.gjqb6eiOuHxudsmOu8pZ8wu3WWMR3jTU/rATsz2', '9852760179', '123456777777', 'RRR1234567', 'uploads/67c87e267365c.jpg', '2025-03-05 16:39:02', NULL, NULL, '2006-01-25', '', NULL);
 
@@ -200,10 +170,6 @@ CREATE TABLE `votes` (
 --
 
 INSERT INTO `votes` (`id`, `voter_id`, `position_id`, `candidate_id`, `vote_time`, `category_id`) VALUES
-(17, 'ABC1234567', 6, 7, '2025-02-10 09:48:45', 2),
-(18, 'SSA1234567', 6, 7, '2025-02-10 09:52:10', 2),
-(23, 'SSA1234567', 5, 5, '2025-03-04 09:44:05', 1),
-(26, 'ABC1234567', 5, 5, '2025-03-05 11:09:30', 1),
 (27, 'RRR1234567', 5, 6, '2025-03-05 16:42:06', 1);
 
 -- --------------------------------------------------------
@@ -225,7 +191,7 @@ CREATE TABLE `voting_results` (
 --
 
 INSERT INTO `voting_results` (`id`, `category_id`, `position_id`, `candidate_id`, `votes`) VALUES
-(50, 1, 5, 5, 3),
+(50, 1, 5, 5, 2),
 (51, 1, 5, 6, 1),
 (52, 2, 6, 7, 2),
 (53, 2, 6, 8, 0);
@@ -350,7 +316,7 @@ ALTER TABLE `votes`
 -- AUTO_INCREMENT for table `voting_results`
 --
 ALTER TABLE `voting_results`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 
 --
 -- Constraints for dumped tables
